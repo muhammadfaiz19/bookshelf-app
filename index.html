@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pysse Bookshelf Apps</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="head_bar">
+    <h1 class="head_bar__title">Pysse Bookshelf Apps</h1>
+  </header>
+  <main>
+    <section class="input_section">
+      <h2>Tambahkan Buku</h2>
+      <form id="inputBook">
+        <div class="input">
+          <label for="inputBookTitle">Judul</label>
+          <input id="inputBookTitle" type="text" required>
+        </div>
+        <div class="input">
+          <label for="inputBookAuthor">Penulis</label>
+          <input id="inputBookAuthor" type="text" required>
+        </div>
+        <div class="input">
+          <label for="inputBookYear">Tahun</label>
+          <input id="inputBookYear" type="number" oninput="onlyNum(this)" required>
+        </div>
+        <div class="input_inline">
+          <label for="inputBookIsComplete">Selesai dibaca</label>
+          <input id="inputBookIsComplete" type="checkbox" onclick="changeText()">
+        </div>
+        <button id="bookSubmit" type="submit">Tambahkan Buku Ke Rak <span id="textChange">Belum Selesai
+            Dibaca</span></button>
+      </form>
+    </section>
+    
+    <div class="shelf-container">
+      <section class="book_shelf">
+        <h2>Daftar Buku Belum selesai dibaca</h2>
+  
+        <div id="uncompleteBookshelfList" class="book_list">
+  
+        </div>
+      </section>
+  
+      <section class="book_shelf">
+        <h2>Daftar Buku Selesai dibaca</h2>
+  
+        <div id="completeBookshelfList" class="book_list">
+  
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+<script src="/assets/js/app.js"></script>
+<script src="/assets/js/data.js"></script>
+<script src="/assets/js/dom.js"></script>
+</html>
